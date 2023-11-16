@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+	<head>
+		<title>AstroBox</title>
+		<link rel="icon" type="image/x-icon" href="public/favicon.ico">
+		<link rel="stylesheet" href="public/style/style.css">
+		<link rel="stylesheet" href="public/style/info-section.css">
+		<script src="public/scripts/script.js" type="application/javascript"></script>
+		<script src="public/scripts/network.js" type="application/javascript"></script>
+		<script src="public/scripts/animation.js" type="application/javascript"></script>
+		<script src="public/scripts/planet-info.js"></script>
+	</head>
+	<body style="margin: 0; overflow:hidden; background-color: #051020;">
+		<img id="bg-image" src="public/planet_centraldatacore/background.jpg" style="position: relative; width:100vw; height:100vh; object-fit: cover;" draggable="false" alt="Bg image"/>
+		<p id="loading">Loading content...</p>
+		<div id="reminder">
+			<img src="public/warning.png" width="54" height="50"/>
+			<p class="warnMessage">Reminder: The scales (distances and sizes) are obviously not a 1:1 from reality.</p>
+			<p id="learnMore">You can learn more about it <a href="scales">here</a></p>
+		</div>
+		<div id="solar-system" draggable="false" class="hide-planet">
+			<img id="sun" src="public/planet_centraldatacore/0_sun.gif" alt="Sun"/>
+			<img id="mercury" class="planet" src="public/planet_centraldatacore/1_mercury.gif" alt="Mercury" x="6vw" y="15vh" w="4vw"/>
+			<img id="venus" class="planet" src="public/planet_centraldatacore/2_venus.gif" alt="Venus" x="11vw" y="-15vh" w="6vw"/>
+			<img id="earth" class="planet" src="public/planet_centraldatacore/3_earth.gif" alt="Earth" x="22vw" y="2vh" w="6vw"/>
+			<img id="mars" class="planet" src="public/planet_centraldatacore/4_mars.gif" alt="Mars" x="30vw" y="20vh" w="5vw"/>
+			<img id="jupiter" class="planet" src="public/planet_centraldatacore/5_jupiter.gif" alt="Jupiter" x="42vw" y="-12vh" w="11vw"/>
+			<img id="saturn" class="planet" src="public/planet_centraldatacore/6_saturn.gif" alt="Saturn" x="55vw" y="-27vh" w="10vw"/>
+			<img id="uranus" class="planet" src="public/planet_centraldatacore/7_uranus.gif" alt="Uranus" x="70vw" y="15vh" w="8vw"/>
+			<img id="neptune" class="planet" src="public/planet_centraldatacore/8_neptune.gif" alt="Neptune" x="85vw" y="-18vh" w="7vw"/>
+		</div>
+		<div id="infos" style="display: none;">
+			<h1 id="iplanetname"></h1>
+			<hr style="width: 100%; margin: 0;"/>
+			<div>
+				<img id="imgLoading" src="public/loading.gif" width="266" height="200" style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);"/>
+				<p id="pLoading" style="position: absolute; top: 60%; left: 50%; transform: translateX(-50%);">Loading...</p>
+				
+				<h1 id="ititle" style="margin: 0;"></h1>
+				<h1 id="itype" style="margin: 10px 0 25px 0;"></h1>
+
+				<div id="idiscovery" class="info-class">
+					<h2>Discovery</h2>
+					<p></p>
+				</div>
+
+				<div id="idistance" class="info-class">
+					<h2>Distance</h2>
+					<p></p>
+					<img class="plot" alt="Planet's distance from sun"/>
+				</div>
+
+				<div id="idiameter" class="info-class">
+					<h2>Diameter</h2>
+					<p></p>
+					<img class="plot" alt="Planet's diameter"/>
+				</div>
+
+				<div id="imass" class="info-class">
+					<h2>Mass</h2>
+					<p></p>
+					<img class="plot" alt="Planet's mass"/>
+				</div>
+
+				<div id="idensity" class="info-class">
+					<h2>Density</h2>
+					<p></p>
+				</div>
+
+				<div id="iorbitaltime" class="info-class">
+					<h2>Orbital Period</h2>
+					<p></p>
+				</div>
+
+				<div id="irottime" class="info-class">
+					<h2>Rotation Period</h2>
+					<p></p>
+				</div>
+
+				<div id="igravity" class="info-class">
+					<h2>Gravity</h2>
+					<p></p>
+					<img class="plot" alt="Planet's gravity"/>
+				</div>
+
+				<div id="iescapespeed" class="info-class">
+					<h2>Escape Speed</h2>
+					<p></p>
+				</div>
+
+				<div id="itemp" class="info-class">
+					<h2>Temperature</h2>
+					<table>
+						<tr>
+							<th scope="col">Min</th>
+							<th scope="col">Mean</th>
+							<th scope="col">Max</th>
+						</tr>
+						<tr>
+							<td></th>
+							<td></td>
+							<td></td>
+						</tr>
+						<caption>Temperature in degree celsius [°C]</caption>
+					</table>
+				</div>
+
+				<div id="isatnumber" class="info-class">
+					<h2>(Natural) Satellite Count</h2>
+					<p></p>
+				</div>
+
+				<div id="ialbedo" class="info-class">
+					<h2>Albedo (Sunlight Reflection)</h2>
+					<p></p>
+				</div>
+
+				<div id="iatmcomp" class="info-class">
+					<h2>Atmospheric Composition</h2>
+					<img class="plot" alt="Planet's atmospheric composition"/>
+				</div>
+
+				<div id="iplanetcomp" class="info-class">
+					<h2>Planet Composition</h2>
+					<img class="plot" alt="Planet's composition"/>
+				</div>
+
+				<div id="irings" class="info-class">
+					<h2>Ring System</h2>
+					<p></p>
+				</div>
+
+				<div id="imagneticfield" class="info-class">
+					<h2>Magnetic Field</h2>
+					<p></p>
+				</div>
+				
+			</div>
+		</div>
+		<dialog>
+			<p>none</p>
+			<button id="close">OK</button>
+		</dialog>
+	</body>
+</html>

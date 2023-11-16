@@ -1,0 +1,73 @@
+#infos {
+    position: absolute;
+    top: 0vh;
+    left: 55vw;
+    width: 45vw;
+    height: 100vh;
+    z-index: -1;
+    color: white;
+    display: flex;
+    flex-flow: column;
+    border-left: black solid 2px;
+}
+
+#infos > h1 {
+    text-align: center;
+    flex: 0 1 auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0;
+    font-size: 250%;
+}
+
+#infos > div {
+    overflow: auto;
+    flex: 1 1 auto;
+    padding: 30px;
+    scroll-padding-top: 56px;
+    word-break: break-word;
+    background-color: #2a344b;
+}
+
+#infos > div > h1 {
+    text-align: center;
+}
+
+.plot {
+    width: 90%;
+    margin: 0 5%;
+}
+
+.info-class {
+    text-align: center;
+}
+
+.info-class > h2 {
+    text-decoration: underline;
+    margin: 45px 0 10px;
+}
+
+.info-class > p {
+    font-size: 110%;
+    margin: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border: 2px solid rgb(200, 200, 200);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+td, th {
+    border: 1px solid rgb(190, 190, 190);
+    padding: 10px;
+    font-size: 110%;
+    min-width: 20%;
+}
+
+caption {
+    caption-side: bottom;
+    font-size: 110%;
+    margin-top: 10px;
+}

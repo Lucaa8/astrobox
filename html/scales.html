@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AstroBox - Scales</title>
+    <link rel="icon" type="image/x-icon" href="public/favicon.ico">
+    <script type="application/javascript" src="public/scripts/scale.js"></script>
+    <link rel="stylesheet" href="public/style/scale.css"/>
+</head>
+<body style="background-color: #051020; overflow: hidden;">
+    <div class="celestial-body" data-scale="{{scales['Sun']}}" data-angle="11/6" data-distance="4500">
+        <div class="overlay" style="clip-path: circle(36.9% at 50% 50%);"></div>
+        <img alt="Sun" src="public/planets/0_sun.webp"/>
+    </div>
+    <div class="celestial-body" data-scale="{{scales['Mercury']}}">
+        <div class="overlay" style="clip-path: circle(49.46% at 50% 50%);"></div>
+        <img alt="Mercury" src="public/planets/1_mercury.webp"/>
+    </div>
+    <div class="celestial-body" data-scale="{{scales['Venus']}}" data-angle="1/3" data-distance="80">
+        <div class="overlay" style="clip-path: circle(49.45% at 49.79% 48.75%);"></div>
+        <img alt="Venus" src="public/planets/2_venus.webp"/>
+    </div>
+    <div class="celestial-body" data-scale="{{scales['Earth']}}" data-angle="3/4" data-distance="90">
+        <div class="overlay" style="clip-path: circle(49.93% at 49.81% 49.25%);"></div>
+        <img alt="Earth" src="public/planets/3_earth.webp"/>
+    </div>
+    <div class="celestial-body" data-scale="{{scales['Mars']}}" data-angle="0" data-distance="30">
+        <div class="overlay" style="clip-path: circle(48.72% at 50% 50%);"></div>
+        <img alt="Mars" src="public/planets/4_mars.webp"/>
+    </div>
+    <div class="celestial-body" data-scale="{{scales['Jupiter']}}" data-angle="5/4" data-distance="900">
+        <div class="overlay" style="clip-path: circle(35.69% at 51.15% 50.25%);"></div>
+        <img alt="Jupiter" src="public/planets/5_jupiter.webp"/>
+    </div>
+    <div class="celestial-body" data-scale="{{scales['Saturn']}}" data-angle="1/2" data-distance="650">
+        <div class="overlay" style="clip-path: circle(30.95% at 50.35% 48.42%);"></div>
+        <img alt="Saturn" src="public/planets/6_saturn.webp"/>
+    </div>
+    <div class="celestial-body" data-scale="{{scales['Uranus']}}" data-angle="11/6" data-distance="230">
+        <div class="overlay" style="clip-path: circle(28.46% at 46.12% 50.80%);"></div>
+        <img alt="Uranus" src="public/planets/7_uranus.webp"/>
+    </div>
+    <div class="celestial-body" data-scale="{{scales['Neptune']}}" data-angle="4/3" data-distance="200">
+        <div class="overlay" style="clip-path: circle(36.9% at 50% 50%);"></div>
+        <img alt="Neptune" src="public/planets/8_neptune.webp"/>
+    </div>
+
+    <div class="warning-div info-div" style="text-align: center">
+        <p>The distances <strong>between</strong> bodies are not respected.</p>
+        <p>Learn more <a href="https://joshworth.com/dev/pixelspace/pixelspace_solarsystem.html" target="_blank">here</a></p>
+    </div>
+    <div class="scale-element">
+        <label class="scale-text">0 KM</label>
+    </div>
+    <div class="planet-info info-div" hidden="">
+        <p id="planet-name"></p>
+        <p id="planet-diameter"></p>
+    </div>
+    <div class="more-info info-div" hidden="">
+        <p>Do you think the Sun is big ? Well... The biggest star (<a href="https://en.wikipedia.org/wiki/UY_Scuti" target="_blank">UY Scuti</a>) found yet is 1708 times bigger than our star with a diameter of 2'378'704'272 KM.</p>
+        <p>If the Earth was a beach ball (20cm) then the Sun would measure 22m and UY Scuti would be 38km long.</p>
+        <p>...But in reality, UY Scuti is <u>small</u> in the Universe. Our Galaxy, the <a href="https://en.wikipedia.org/wiki/Milky_Way" target="_blank">Milky Way</a>, is 336'317'552 times bigger than UY Scuti.</p>
+        <p>Anyways, you got the point. We are tiny.</p>
+    </div>
+    <button onclick="location.href = '/';">Back to main page</button>
+</body>
+</html>

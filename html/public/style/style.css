@@ -1,0 +1,121 @@
+img {
+    user-select: none;
+    user-drag: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+#loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 36px;
+}
+
+#solar-system {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100vw;
+}
+
+.hide-planet > img{
+    display: none;
+}
+
+.planet {
+    position: absolute;
+    transform: translateY(-50%);
+    cursor: pointer;
+    clip-path: circle(36.9% at 50% 50%);
+    transition: transform 0.2s;
+}
+
+#sun {
+    position: relative;
+    width: 15vw;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    clip-path: circle(36.9% at 50% 50%);
+    transition: transform 0.2s;
+}
+
+.div-infos {
+    position: absolute;
+    background-color: black;
+    opacity: 0.7;
+    border-radius: 20px;
+}
+
+.text-info {
+    margin: 10px 10px 10px 10px;
+    color: white;
+    font-size: 0.9vw;
+}
+
+/* REMINDER */
+#reminder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 10px;
+    padding: 7px;
+    border-color: white;
+    border-style: solid;
+    border-radius: 15px;
+    border-width: 2px;
+}
+
+#reminder > img {
+    transform: translateY(25%);
+}
+
+#reminder > p {
+    color: white;
+    margin: 0 0 0 10px;
+}
+
+.warnMessage {
+    display: inline-block;
+    transform: translateY(-100%);
+}
+
+#learnMore {
+    position: relative;
+    left: 58px;
+}
+
+#learnMore > a:link {
+    color: #bd8712;
+}
+
+#learnMore > a:visited {
+    color: #a99366;
+}
+
+/* DIALOG */
+/* https://codepen.io/geckotang/post/dialog-with-animation */
+
+dialog[open] {
+    -webkit-animation: show 0.5s ease normal;
+}
+dialog.hide {
+    -webkit-animation: hide 0.3s ease normal;
+}
+@-webkit-keyframes show{
+    from {
+        transform: translateY(-110%);
+    }
+    to {
+        transform: translateY(0%);
+    }
+}
+@-webkit-keyframes hide{
+    to {
+        transform: translateY(-110%);
+    }
+}
