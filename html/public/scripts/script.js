@@ -75,7 +75,7 @@ function displayBasics(planet) {
 
 window.onload = () => {
 
-    document.getElementById("loading").style.display = "none";
+    document.getElementById("loading-area").style.display = "none";
     document.getElementById("solar-system").classList.remove("hide-planet");
 
     for(let planet of document.getElementById("solar-system").children) {
