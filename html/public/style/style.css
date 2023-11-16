@@ -97,6 +97,49 @@ img {
     color: #a99366;
 }
 
+#credits {
+    border-color: white;
+    border-style: solid;
+    border-radius: 15px;
+    border-width: 1px;
+    position: absolute;
+    left: 50%;
+    bottom: 3vh;
+    transform: translateX(-50%);
+}
+
+#credits > h1 {
+    color: white;
+    font-size: 0.9vw;
+    padding: 0px 5px 0px 5px;
+}
+
+.fade-element {
+    animation: fadeOut 0.5s ease forwards;
+}
+  
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.show-element {
+animation: fadeIn 0.5s ease forwards; /* Animation de retour */
+}
+  
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 /* DIALOG */
 /* https://codepen.io/geckotang/post/dialog-with-animation */
 

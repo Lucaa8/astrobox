@@ -106,12 +106,22 @@ window.onload = () => {
                 return;
             }
             if(!planet.hasAttribute("selected")) {
+                if (document.getElementById("credits").classList.contains("show-element"))
+                {
+                    document.getElementById("credits").classList.remove("show-element");
+                }
+                document.getElementById("credits").classList.add("fade-element");
                 setInfos(planet.alt);
                 document.getElementById("bg-image").animate([{ width: "100vw" }, { width: "55vw" }], { duration: 500, fill: "forwards" });
                 popoutPlanets(planet, () => {
                     document.getElementById("infos").style.zIndex = "0";
                 });
             } else {
+                if (document.getElementById("credits").classList.contains("fade-element"))
+                {
+                    document.getElementById("credits").classList.remove("fade-element");
+                }
+                document.getElementById("credits").classList.add("show-element");
                 document.getElementById("infos").style.zIndex = "";
                 document.getElementById("bg-image").animate([{ width: "55vw" }, { width: "100vw" }], { duration: 500, fill: "forwards" });
                 bringinPlanets(planet);

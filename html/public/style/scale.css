@@ -17,7 +17,7 @@
 .scale-element {
     position: absolute;
     left: 50vw;
-    top: 80vh;
+    top: 70vh;
     height: 7px;
     transform: translate(-50%, -50%);
     background-color: white;
